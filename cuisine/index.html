@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les Sveurs Croisées</title>
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <a href="#" class="logo">Saveurs<span>Croisées</span></a>
+    <nav>
+    <ul class="navigation">
+
+     
+      <li><a href="#home"><i class='bx bx-home'></i>Home</a></li>
+      <li><a href="#services"><i class='bx bx-menu'></i>Menu</a></li>     
+      <li><a href="#chefs"><i class='bx bx-user'></i>Nos chefs</a></li>
+      <li><a href="#contact"><i class='bx bx-envelope'></i>Contact</a></li>
+    </ul>
+
+    <div id="burger-menu" class="bx bx-menu"></div>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <span class="subtitle">Bevenus sur notre espace</span>
+      <h1>Rencontrez les <span>Chefs Étoilés</span></h1>
+      <p>Le restaurant Les Saveurs Croisées vous invite à découvrir une cuisine authentique et raffinée, <br> née de la rencontre entre les traditions du Maroc et du Gabon. Un voyage de saveurs, <br> entre épices envoûtantes, recettes ancestrales et ambiance chaleureuse.</p>
+      <a href="#copy" class="btn">En savoir plus</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="section-heading">
+      <span>Explorez le Monde des Chefs de Renom</span>
+      <h2>PLATS PRINCIPEAUX</h2>
+    </div>
+    <div class="services-container">
+      <div class="service-box">
+        <img src="plat1.jpg" alt="">
+        <h3>Chikwangue.</h3>
+        <p>Le Chikwangue , un type de pain de manioc cuit à la vapeur, est une source de glucides très appréciée au GABON.</p>
+      <button class="btn show-order-form" data-plat="Chikwangue">Effectuer une commande</button>
+      </div>
+      <div class="service-box">
+        <img src="plat2.jpg" alt="">
+        <h3>Volaille mariné.</h3>
+        <p>Recette des Suprêmes de volaille, bouillon persillé et légumes de saison.</p>
+        <button class="btn show-order-form" data-plat="Volaille marine">Effectuer une commande</button>
+      </div>
+      <div class="service-box">
+        <img src="plat4.jpg" alt="">
+        <h3>Tajine de légumes marocain.</h3>
+        <p>Un savoureux mélange de légumes frais mijotés lentement dans un tajine traditionnel en terre cuite, relevé d'un mélange d'épices marocaines</p>
+        <button class="btn show-order-form" data-plat="Tajine de légumes marocain">Effectuer une commande</button>
+      </div>
+    </div>
+
+    <div class="services-container">
+      <div class="service-box">
+        <img src="plats0.jpg" alt="">
+        <h3>Spaguetti viande hachée.</h3>
+        <p>Un plat de pâtes savoureux, avec une sauce tomate
+         <br>  riche et de la viande hachée épicée, servi avec du fromage </p>
+        <button class="btn show-order-form" data-plat="Spaguetti viande hachée">Effectuer une commande</button>
+      </div>
+      <div class="service-box">
+        <img src="plat2.jpg" alt="">
+        <h3>Volaille mariné.</h3>
+        <p>Recette des Suprêmes de volaille, bouillon persillé et légumes de saison.</p>
+        <button class="btn show-order-form" data-plat="Volaille marine">Effectuer une commande</button>
+      </div>
+      <div class="service-box">
+        <img src="plat4.jpg" alt="">
+        <h3>Tajine de légumes marocain.</h3>
+        <p>Un savoureux mélange de légumes frais mijotés lentement dans un tajine traditionnel en terre cuite, relevé d'un mélange d'épices marocaines</p>
+        <button class="btn show-order-form" data-plat="Tajine de légumes marocain">Effectuer une commande</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- agent IA : Ajoute ce bouton où tu veux -->
+<button id="aide-btn" style="position:fixed;bottom:20px;right:20px;z-index:999;background:#e67e22;color:#fff;border:none;padding:15px 20px;border-radius:50%;font-size:1.5em;cursor:pointer;">?</button>
+<div id="aide-faq" style="display:none;position:fixed;bottom:80px;right:20px;z-index:999;background:#fff;border-radius:10px;box-shadow:0 2px 12px #0002;padding:20px;max-width:300px;">
+  <strong>Besoin d'aide ?</strong>
+  <ul style="padding-left:18px;">
+    <li>Pour commander, cliquez sur "Effectuer une commande".</li>
+    <li>Pour contacter un chef, utilisez la section "Contact".</li>
+    <li>Pour toute question, écrivez-nous via le formulaire de contact.</li>
+  </ul>
+  <button onclick="document.getElementById('aide-faq').style.display='none'" style="margin-top:10px;">Fermer</button>
+</div>
+
+  <!-- Chefs Section -->
+  <section class="chefs" id="chefs">
+    <div class="section-heading">
+      <span>Les Génies des Casseroles</span>
+      <h2>Nos chefs</h2>
+    </div>
+    <div class="chefs-container">
+      <div class="chefs-box">
+        <img src="chef1.jpg" alt="">
+        <div class="chefs-content">
+          <h4>MOUTSINGA MOUTSINGA Warris</h4>
+          <p>Chef international Gabonais de grande renommée.</p>
+          <a href="#" class="btn show-chef-modal" data-chef="warris">En savoir plus</a>
+        </div>
+      </div>
+      <div class="chefs-box">
+        <img src="chef5.jpg" alt="chefs anne">
+        <div class="chefs-content">
+          <h4>RIH AYA</h4>
+          <p>Chef international Marocaine de grande renommée.</p>
+          <a href="#" class="btn show-chef-modal" data-chef="rihaya">En savoir plus</a>
+        </div>
+      </div>
+      <div class="chefs-box">
+        <img src="chef0.jpg" alt="">
+        <div class="chefs-content">
+          <h4>MOUKOGHO ABOUE Caleb Exaucé Thierry</h4>
+          <p>Chef international Gabonais de grande renommée.</p>
+          <a href="#" class="btn show-chef-modal" data-chef="caleb">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="section-heading">
+      <span>Laissez-vous séduire</span>
+      <h2>Nous contacter</h2>
+    </div>
+    <div class="contact-container">
+      <form class="contact-form" method="POST" action="https://formspree.io/f/mdkeqjpd">
+          <input type="text" name="nom" placeholder="Votre nom" required>
+          <input type="email" name="email" placeholder="Votre email" required>
+          <textarea name="message" rows="5" placeholder="Votre message"></textarea>
+        <input type="submit" value="Envoyer" class="btn">
+      </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="copy" id="copy">
+    <p>&copy; Les Saveurs Croisées</p>
+    <div>
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+    </div>
+  </footer>
+
+<div id="order-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3 id="modal-plat-name"></h3>
+    <form class="order-form-modal" method="POST" action="https://formspree.io/f/mdkeqjpd">
+      <label>Prix:
+        <input type="number" name="prix" placeholder="Prix en €" required>
+      </label>
+      <label>Adresse de livraison:
+        <input type="text" name="adresse" placeholder="Votre adresse" required>
+      </label>
+      <label>Méthode de paiement:
+        <select name="paiement" class="paiement-select-modal" required>
+          <option value="">Choisir...</option>
+          <option value="carte">Carte bancaire</option>
+          <option value="livraison">À la livraison</option>
+        </select>
+      </label>
+      <div class="carte-info-modal" style="display:none;">
+        <label>Numéro de carte:
+          <input type="text" name="numero_carte" maxlength="19" placeholder="1234 5678 9012 3456">
+        </label>
+        <label>Date d'expiration:
+          <input type="text" name="expiration" maxlength="5" placeholder="MM/AA">
+        </label>
+        <label>CVV:
+          <input type="text" name="cvv" maxlength="4" placeholder="CVV">
+        </label>
+        <label>Nom sur la carte:
+          <input type="text" name="nom_carte" placeholder="Nom complet">
+        </label>
+      </div>
+      <input type="submit" value="Commander" class="btn">
+    </form>
+  </div>
+</div>
+
+ <div id="chef-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-chef-modal">&times;</span>
+    <img id="chef-modal-img" src="" alt="" style="max-width:120px;display:block;margin:0 auto 10px;">
+    <h4 id="chef-modal-name"></h4>
+    <p id="chef-modal-desc"></p>
+  </div>
+</div>
+
+<!-- Agent IA (Dialogflow Messenger) -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Aide Saveurs Croisées"
+  agent-id="VOTRE_AGENT_ID"
+  language-code="fr"
+></df-messenger>
+
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
